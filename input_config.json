@@ -1,0 +1,99 @@
+{
+  "metrics": {
+    "plugins": [
+      {
+        "name": "linux"
+      },
+      {
+        "name": "elasticsearchagent",
+        "config": {
+          "port": 9200,
+          "es_protocol": "http",
+          "es_username": "elastic",
+          "es_password": "elastic",
+          "documentsTypes": [
+            "clusterStats",
+            "nodeStat s",
+            "indexStats"
+          ]
+        }
+      }
+    ],
+    "enabled": true,
+    "targets": [
+      "metric-apm"
+    ],
+    "tags": {
+      "projectName": "tdasyslog",
+      "Name": "test",
+      "appName": "tdasyslog"
+    }
+  },
+  "logging": {
+    "plugins": [
+      {
+        "name": "linux-syslog",
+        "config": {
+          "filters": {
+            "level": [
+              "error","warning","info"
+            ]
+          }
+        }
+      }
+    ],
+    "enabled": true,
+    "targets": [
+      "log-apm",
+      "metric-apm"
+    ],
+    "tags": {
+      "projectName": "tdasyslog",
+      "Name": "test",
+      "appName": "tdasyslog"
+    }
+  },
+  "name": "172.31.47.20",
+  "port": 8585,
+  "application": "redis-load-test",
+  "targets": [
+    {
+      "config": {
+        "index": "tdasyslog-metric",
+        "rollover_max_docs": "None",
+        "protocol": "http",
+        "indexType": "roll_over",
+        "replicas": 1,
+        "shards": 3,
+        "rollover_max_age": "1d",
+        "host": "10.11.100.115",
+        "store_type": "metric",
+        "rollover": "True",
+        "port": 9200,
+        "username": "elastic",
+        "password": "elastic"
+      },
+      "type": "elasticsearch",
+      "name": "metric-apm"
+    },
+    {
+      "config": {
+        "index": "tdasyslog-logger",
+        "rollover_max_docs": "None",
+        "protocol": "http",
+        "indexType": "roll_over",
+        "replicas": 1,
+        "shards": 3,
+        "rollover_max_age": "1d",
+        "host": "10.11.100.115",
+        "store_type": "logger",
+        "rollover": "True",
+        "port": 9200,
+        "username": "elastic",
+        "password": "elastic"
+      },
+      "type": "elasticsearch",
+      "name": "log-apm"
+    }
+  ]
+}
