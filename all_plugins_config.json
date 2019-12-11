@@ -21,7 +21,7 @@
           "es_password": "elastic",
           "documentsTypes": [
             "clusterStats",
-            "nodeStat s",
+            "nodeStats",
             "indexStats"
           ]
         }
