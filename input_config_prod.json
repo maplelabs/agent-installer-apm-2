@@ -5,14 +5,6 @@
         "name": "linux"
       },
       {
-        "name": "nginx",
-        "config": {
-          "port": "80",
-          "secure": "false",
-          "location": "stats"
-        }
-      },
-      {
         "name": "elasticsearchagent",
         "config": {
           "port": 9200,
@@ -25,51 +17,6 @@
             "indexStats"
           ]
         }
-      },
-      {
-        "name": "tomcat",
-        "config": {
-          "documentsTypes": [
-            "tomcatStats",
-            "requestProcessorStats",
-            "jvmStats",
-            "contextStats"
-          ]
-        }
-      },
-      {
-        "name": "topstats",
-        "config": {
-          "process": "*",
-          "resource": "CPU"
-        }
-      },
-      {
-        "name": "apache",
-        "config": {
-          "port": "80",
-          "secure": "false",
-          "location": "server-status?auto"
-        }
-      },
-      {
-        "name": "jvm",
-        "config": {
-          "process": "petclinic"
-        }
-      },
-      {
-        "name": "mysql",
-        "config": {
-          "host": " 127.0.0.1",
-          "user": "root",
-          "password": "3ffbfb87ccee0c5f4baffd06876b351d",
-          "documentsTypes": [
-            "databaseDetails",
-            "serverDetails",
-            "tableDetails"
-          ]
-        }
       }
     ],
     "enabled": true,
@@ -77,119 +24,21 @@
       "metric-apm"
     ],
     "tags": {
-      "projectName": "vizProject",
+      "projectName": "tdasyslog",
       "Name": "test",
-      "appName": "ameritrade"
+      "appName": "tdasyslog"
     }
   },
   "logging": {
-    
     "plugins": [
       {
         "name": "linux-syslog",
         "config": {
           "filters": {
             "level": [
-              "error,warning,info"
+              "error","warning","info"
             ]
           }
-        }
-      },
-      {
-        "name": "jmeter",
-        "config": {
-          "filters": {},
-          "log_paths": "/home/ec2-user/log.jtl"
-        }
-      },
-      {
-        "name": "nginx-access",
-        "config": {
-          "filters": {},
-          "log_paths": "/var/log/nginx/access.log"
-        }
-      },
-      {
-        "name": "nginx-error",
-        "config": {
-          "filters": {
-            "level": [
-              "error"
-            ]
-          },
-          "log_paths": "/var/log/nginx/error.log"
-        }
-      },
-      {
-        "name": "apache-access",
-        "config": {
-          "filters": {
-            "met hod": [
-              "GET",
-              "POST",
-              "PUT",
-              "DELETE"
-            ]
-          },
-          "log_paths": "/var/log/apache2/access.log"
-        }
-      },
-      {
-        "name": "apache-error",
-        "config": {
-          "filters": {
-            "leve l": [
-              "error"
-            ]
-          },
-          "log_paths": "/var/log/apache2/error.log"
-        }
-      },
-      {
-        "name": "mysql-general",
-        "config": {
-          "filters": {},
-          "log_paths ": "/var/log/mysql/mysql.log"
-        }
-      },
-      {
-        "name": "mysql-slowquery",
-        "config": {
-          "filters": {},
-          "log_paths": "/var/lib/mysql/ip-*slow.lo g"
-        }
-      },
-      {
-        "name": "mysql-error",
-        "config": {
-          "filters": {
-            "level": [
-              "error"
-            ]
-          },
-          "log_paths": "/var/log/mysql/error.log"
-        }
-      },
-      {
-        "name": "elasticsearch-general",
-        "config": {
-          "filters": {
-            "level": [
-              "error"
-            ]
-          },
-          "log_paths": "/var/log/elasticsearch/master-2-master-2/systemapp-13308.log"
-        }
-      },
-      {
-        "name": "tomcat",
-        "config": {
-          "filters": {
-            "level": [
-              "error"
-            ]
-          },
-          "log_paths": "/opt/apache-tomcat-9.0.12/logs/catalina.out"
         }
       }
     ],
@@ -200,7 +49,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/ngoms_grid_config.conf",
         "collection_type": "metric",
         "field_discovery": "On",
-        "add_offset": "Off",
+        "add_offset": "On",
         "number_fields": "pendingRequestCount,totalWaitForConnectionTime,AdamClass,member,mdCount,bebEventProcessTime,QuoteResponse,numofaccounts,elapsedTime,delayTime,symbolcountrequested,symboncountreturned,notLocatedOrderId,quote_resp_ms",
         "string_fields": ""
       }
@@ -211,9 +60,9 @@
       "metric-apm"
     ],
     "tags": {
-      "projectName": "vizProject",
+      "projectName": "tdasyslog",
       "Name": "test",
-      "appName": "ameritrade"
+      "appName": "tdasyslog"
     }
   },
   "name": "172.31.47.20",
@@ -222,14 +71,14 @@
   "targets": [
     {
       "config": {
-        "index": "vizproject-metric",
+        "index": "tdasyslog-metric",
         "rollover_max_docs": "None",
         "protocol": "http",
         "indexType": "roll_over",
         "replicas": 1,
         "shards": 3,
         "rollover_max_age": "1d",
-        "host": "apmdev.snappyflow.io",
+        "host": "10.11.100.115",
         "store_type": "metric",
         "rollover": "True",
         "port": 9200,
@@ -241,14 +90,14 @@
     },
     {
       "config": {
-        "index": "vizproject-logger",
+        "index": "tdasyslog-logger",
         "rollover_max_docs": "None",
         "protocol": "http",
         "indexType": "roll_over",
         "replicas": 1,
         "shards": 3,
         "rollover_max_age": "1d",
-        "host": "apmdev.snappyflow.io",
+        "host": "10.11.100.115",
         "store_type": "logger",
         "rollover": "True",
         "port": 9200,
