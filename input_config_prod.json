@@ -47,7 +47,7 @@
         "name": "ngoms_grid",
         "parser": "/opt/sfapm/td-agent-bit/templates/ngoms_grid_parser.conf",
         "plugin": "/opt/sfapm/td-agent-bit/templates/ngoms_grid_config.conf",
-        "collection_type": "metric",
+        "collection_type": "logger",
         "field_discovery": "On",
         "add_offset": "On",
         "number_fields": "pendingRequestCount,totalWaitForConnectionTime,AdamClass,member,mdCount,bebEventProcessTime,QuoteResponse,numofaccounts,elapsedTime,delayTime,symbolcountrequested,symboncountreturned,notLocatedOrderId,quote_resp_ms",
