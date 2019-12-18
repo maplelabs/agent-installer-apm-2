@@ -18,7 +18,7 @@ pip install virtualenv --no-index -f pypackages
 virtualenv /opt/sfapm/sfapm-venv/
 source /opt/sfapm/sfapm-venv/bin/activate
 pip install PyYAML --no-index -f pypackages
-yum install --skip-broken -y sysstat
+#yum install --skip-broken -y sysstat
 \cp -rf collectd /opt/sfapm
 pip install --no-index -f pypackages -r requirements.txt
 \cp -rf configurator-exporter /opt/sfapm
