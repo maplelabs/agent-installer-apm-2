@@ -27,6 +27,7 @@ cp /opt/sfapm/collectd/init_scripts/centos7.init /etc/systemd/system/collectd.se
 \cp -rf td-agent-bit /opt/sfapm
 cp /opt/sfapm/td-agent-bit/lib/systemd/system/td-agent-bit.service /etc/systemd/system/td-agent-bit.service
 chmod 777 /opt/sfapm/td-agent-bit/opt/td-agent-bit/bin/td-agent-bit
+python fluentbit-script/FluentbitConfigurator.py fluentbit-script/props.conf fluentbit-script/input.conf fluentbit-script/reg.csv /opt/sfapm/td-agent-bit/templates
 systemctl daemon-reload
 systemctl enable configurator
 systemctl enable collectd
