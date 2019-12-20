@@ -33,7 +33,13 @@ cp /opt/sfapm/collectd/init_scripts/centos6.init /etc/init.d/collectd
 chmod 755 /etc/init.d/collectd
 chkconfig --add collectd
 chkconfig collectd on
-python fluentbit-script/FluentbitConfigurator.py fluentbit-script/props.conf fluentbit-script/input.conf fluentbit-script/reg.csv /opt/sfapm/td-agent-bit/templates
+\cp -rf td-agent-bit /opt/sfapm
+cp /opt/sfapm/td-agent-bit/lib/td-agent-bit.service /etc/init.d/td-agent-bit
+chmod 755 /opt/sfapm/td-agent-bit/opt/td-agent-bit/bin/td-agent-bit
+chmod 755 /etc/init.d/td-agent-bit
+chkconfig --add td-agent-bit
+chkconfig td-agent-bit on
+#python fluentbit-script/FluentbitConfigurator.py fluentbit-script/props.conf fluentbit-script/input.conf fluentbit-script/reg.csv /opt/sfapm/td-agent-bit/templates
 #iptables -I INPUT 1 -p tcp -m tcp --dport $CONF_PORT -j ACCEPT
 #iptables-save | sudo tee /etc/sysconfig/iptables
 #service iptables restart
