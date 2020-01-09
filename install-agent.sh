@@ -22,6 +22,7 @@ pip install pbr --no-index -f pypackages
 pip install traceback2 --no-index -f pypackages
 pip install six --no-index -f pypackages
 #yum install --skip-broken -y sysstat
+yum install --skip-broken -y perf
 \cp -rf collectd /opt/sfapm
 pip install --no-index -f pypackages -r requirements.txt
 \cp -rf configurator-exporter /opt/sfapm
