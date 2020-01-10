@@ -1,4 +1,6 @@
 oauth==1.0.1
+PyYAML==3.13
+setuptools==36.8.0
 pyserial==3.4
 psycopg2==2.7.3.2
 user-agents==2.0
