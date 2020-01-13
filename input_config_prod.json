@@ -51,7 +51,7 @@
         "field_discovery": "On",
         "add_offset": "On",
         "number_fields": "pendingRequestCount,totalWaitForConnectionTime,member,mdCount,bebEventProcessTime,QuoteResponse,numofaccounts,elapsedTime,delayTime,symbolcountrequested,symbolcountreturned,notLocatedOrderId,quote_resp_ms",
-        "string_fields": "",
+        "string_fields": "poolName",
         "time_fields": "Timestamp,startTime,endTime"
       }
     ],
