@@ -5,6 +5,13 @@
         "name": "linux"
       },
       {
+        "name": "topstats",
+        "config": {
+          "process": "*",
+          "resource": "CPU"
+        }
+      },
+      {
         "name": "elasticsearchagent",
         "config": {
           "port": 9200,
