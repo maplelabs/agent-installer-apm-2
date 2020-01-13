@@ -22,7 +22,14 @@ pip install pbr --no-index -f pypackages
 pip install traceback2 --no-index -f pypackages
 pip install six --no-index -f pypackages
 #yum install --skip-broken -y sysstat
-yum install --skip-broken -y perf
+if yum list installed perf >/dev/null 2>&1; then
+    echo "Perf package is already installed"
+else
+    echo "Perf package not installed ..."
+    echo "Without perf package we will not be able to fetch data for cpu metrics 'LLC-loads, LLC-load-misses'"
+    echo "To install perf package, run 'sudo yum install perf'"
+fi
+
 \cp -rf collectd /opt/sfapm
 pip install --no-index -f pypackages -r requirements.txt
 \cp -rf configurator-exporter /opt/sfapm
