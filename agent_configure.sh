@@ -40,5 +40,5 @@ sed "s/@h/$hostname/g" $infile > payload.json
 sed -i "s/@e/$esname/g" payload.json
 sed -i "s/@p/$projectname/g" payload.json
 sed -i "s/@a/$appname/g" payload.json
-#curl -X POST "localhost:8585/api/config" -d @payload.json -H "Content-Type: application/json"
+curl -X POST "localhost:8585/api/config" -d @payload.json -H "Content-Type: application/json"
 
