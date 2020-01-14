@@ -31,9 +31,9 @@
       "metric-apm"
     ],
     "tags": {
-      "projectName": "tdasyslog",
-      "Name": "test",
-      "appName": "tdasyslog"
+      "projectName": "@p",
+      "Name": "@h",
+      "appName": "@a"
     }
   },
   "logging": {
@@ -55,25 +55,25 @@
       "metric-apm"
     ],
     "tags": {
-      "projectName": "tdasyslog",
-      "Name": "test",
-      "appName": "tdasyslog"
+      "projectName": "@p",
+      "Name": "@h",
+      "appName": "@a"
     }
   },
-  "name": "172.31.47.20",
+  "name": "@h",
   "port": 8585,
-  "application": "redis-load-test",
+  "application": "application-test",
   "targets": [
     {
       "config": {
-        "index": "tdasyslog-metric",
+        "index": "@p-metric",
         "rollover_max_docs": "None",
         "protocol": "http",
         "indexType": "roll_over",
         "replicas": 1,
         "shards": 3,
         "rollover_max_age": "1d",
-        "host": "10.11.100.115",
+        "host": "@e",
         "store_type": "metric",
         "rollover": "True",
         "port": 9200,
@@ -85,14 +85,14 @@
     },
     {
       "config": {
-        "index": "tdasyslog-logger",
+        "index": "@p-logger",
         "rollover_max_docs": "None",
         "protocol": "http",
         "indexType": "roll_over",
         "replicas": 1,
         "shards": 3,
         "rollover_max_age": "1d",
-        "host": "10.11.100.115",
+        "host": "@e",
         "store_type": "logger",
         "rollover": "True",
         "port": 9200,
