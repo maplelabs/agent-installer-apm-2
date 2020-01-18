@@ -1,0 +1,255 @@
+{
+  "metrics": {
+    "plugins": [
+      {
+        "name": "linux"
+      },
+      {
+        "name": "elasticsearchagent",
+        "config": {
+          "port": 9200,
+          "es_protocol": "http",
+          "es_username": "elastic",
+          "es_password": "elastic",
+          "documentsTypes": [
+            "clusterStats",
+            "nodeStats",
+            "indexStats"
+          ]
+        }
+      }
+    ],
+    "enabled": true,
+    "targets": [
+      "metric-apm"
+    ],
+    "tags": {
+      "projectName": "toslogs",
+      "Name": "test",
+      "appName": "toslogs"
+    }
+  },
+  "logging": {
+    "plugins": [
+      {
+        "name": "linux-syslog",
+        "config": {
+          "filters": {
+            "level": [
+              "error","warning","info"
+            ]
+          }
+        }
+      }
+    ],
+    "custom-plugins": [
+      {
+        "name": "alertaccess",
+        "parser": "/opt/sfapm/td-agent-bit/templates/alertaccess_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/alertaccess_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "clientmux",
+        "parser": "/opt/sfapm/td-agent-bit/templates/clientmux_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/clientmux_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "restarts",
+        "parser": "/opt/sfapm/td-agent-bit/templates/restarts_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/restarts_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "server_admin_openapi",
+        "parser": "/opt/sfapm/td-agent-bit/templates/server_admin_openapi_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/server_admin_openapi_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "Off",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "server_admin",
+        "parser": "/opt/sfapm/td-agent-bit/templates/server_admin_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/server_admin_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tomcat_admin",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tomcat_admin_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_admin_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tomcat_admin_tdanotsecured",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tomcat_admin_tdanotsecured_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_admin_tdanotsecured_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "add_offset": "Off",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tomcat_autoupdate_autoupdate_access",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tomcat_autoupdate_autoupdate_access_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_autoupdate_autoupdate_access_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "add_offset": "Off",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tomcat_autoupdate",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tomcat_autoupdate_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_autoupdate_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tosmgw_common_unregdevice",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_unregdevice_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_unregdevice_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "Off",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tosmgw_common_invocation",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_invocation_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_invocation_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tosmgw_common_profiler",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_profiler_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_profiler_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tosmgw_common_user",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_user_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_user_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "tossgw",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tossgw_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tossgw_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "On",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      }
+    ],
+    "enabled": true,
+    "targets": [
+      "log-apm",
+      "metric-apm"
+    ],
+    "tags": {
+      "projectName": "toslogs",
+      "Name": "test",
+      "appName": "toslogs"
+    }
+  },
+  "name": "172.31.47.20",
+  "port": 8585,
+  "application": "redis-load-test",
+  "targets": [
+    {
+      "config": {
+        "index": "toslogs-metric",
+        "rollover_max_docs": "None",
+        "protocol": "http",
+        "indexType": "roll_over",
+        "replicas": 1,
+        "shards": 3,
+        "rollover_max_age": "1d",
+        "host": "35.161.22.13",
+        "store_type": "metric",
+        "rollover": "True",
+        "port": 9200,
+        "username": "elastic",
+        "password": "elastic"
+      },
+      "type": "elasticsearch",
+      "name": "metric-apm"
+    },
+    {
+      "config": {
+        "index": "toslogs-logger",
+        "rollover_max_docs": "None",
+        "protocol": "http",
+        "indexType": "roll_over",
+        "replicas": 1,
+        "shards": 3,
+        "rollover_max_age": "1d",
+        "host": "35.161.22.13",
+        "store_type": "logger",
+        "rollover": "True",
+        "port": 9200,
+        "username": "elastic",
+        "password": "elastic"
+      },
+      "type": "elasticsearch",
+      "name": "log-apm"
+    }
+  ]
+}
