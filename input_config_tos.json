@@ -24,9 +24,9 @@
       "metric-apm"
     ],
     "tags": {
-      "projectName": "toslogs",
-      "Name": "test",
-      "appName": "toslogs"
+      "projectName": "@p",
+      "Name": "@h",
+      "appName": "@a"
     }
   },
   "logging": {
@@ -204,25 +204,25 @@
       "metric-apm"
     ],
     "tags": {
-      "projectName": "toslogs",
-      "Name": "test",
-      "appName": "toslogs"
+      "projectName": "@p",
+      "Name": "@h",
+      "appName": "@a"
     }
   },
-  "name": "172.31.47.20",
+  "name": "@h",
   "port": 8585,
   "application": "redis-load-test",
   "targets": [
     {
       "config": {
-        "index": "toslogs-metric",
+        "index": "@p-metric",
         "rollover_max_docs": "None",
         "protocol": "http",
         "indexType": "roll_over",
         "replicas": 1,
         "shards": 3,
         "rollover_max_age": "1d",
-        "host": "35.161.22.13",
+        "host": "@e",
         "store_type": "metric",
         "rollover": "True",
         "port": 9200,
@@ -234,14 +234,14 @@
     },
     {
       "config": {
-        "index": "toslogs-logger",
+        "index": "@p-logger",
         "rollover_max_docs": "None",
         "protocol": "http",
         "indexType": "roll_over",
         "replicas": 1,
         "shards": 3,
         "rollover_max_age": "1d",
-        "host": "35.161.22.13",
+        "host": "@e",
         "store_type": "logger",
         "rollover": "True",
         "port": 9200,
