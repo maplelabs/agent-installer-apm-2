@@ -6,9 +6,11 @@
       },
       {
         "name": "topstats",
+        "interval": 10,
         "config": {
           "process": "*",
-          "resource": "CPU"
+          "resource": "CPU",
+          "maximum_grep": 5
         }
       },
       {
