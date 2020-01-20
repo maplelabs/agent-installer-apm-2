@@ -5,6 +5,15 @@
         "name": "linux"
       },
       {
+        "name": "topstats",
+        "interval": 10,
+        "config": {
+          "process": "*",
+          "resource": "CPU",
+          "maximum_grep": 5
+        }
+      },
+      {
         "name": "elasticsearchagent",
         "config": {
           "port": 9200,
