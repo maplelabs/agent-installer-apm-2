@@ -197,6 +197,17 @@
         "time_fields": ""
       },
       {
+        "name": "tosmgw_common",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "add_offset": "On",
+        "number_fields": "",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
         "name": "tossgw",
         "parser": "/opt/sfapm/td-agent-bit/templates/tossgw_parser.conf",
         "plugin": "/opt/sfapm/td-agent-bit/templates/tossgw_config.conf",
