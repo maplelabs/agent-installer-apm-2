@@ -78,7 +78,7 @@
         "name": "restarts",
         "parser": "/opt/sfapm/td-agent-bit/templates/restarts_parser.conf",
         "plugin": "/opt/sfapm/td-agent-bit/templates/restarts_config.conf",
-        "log_path": "/var/log/restarts.log",
+        "log_path": "/app/tosbqa/log/restarts.log",
         "collection_type": "logger",
         "field_discovery": "Off",
         "add_offset": "On",
