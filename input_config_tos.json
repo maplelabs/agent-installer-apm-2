@@ -58,7 +58,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/alertaccess_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "size,code",
         "string_fields": "",
         "time_fields": "",
@@ -73,7 +73,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/clientmux_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "size,code",
         "string_fields": "",
         "time_fields": ""
@@ -85,7 +85,7 @@
         "log_path": "/app/tosbqa/log/restarts.log",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -96,6 +96,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/server_admin_openapi_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
+        "add_offset": "Off",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -106,7 +107,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/server_admin_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -117,7 +118,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_admin_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "size,code",
         "string_fields": "",
         "time_fields": ""
@@ -128,6 +129,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_admin_tdanotsecured_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
+        "add_offset": "Off",
         "number_fields": "size,code",
         "string_fields": "",
         "time_fields": ""
@@ -138,6 +140,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_autoupdate_autoupdate_access_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
+        "add_offset": "Off",
         "number_fields": "size,code",
         "string_fields": "",
         "time_fields": ""
@@ -148,7 +151,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tomcat_autoupdate_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -159,6 +162,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_unregdevice_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
+        "add_offset": "Off",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -169,7 +173,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_invocation_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -180,7 +184,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_profiler_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -191,7 +195,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_user_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -202,7 +206,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
@@ -213,7 +217,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/tossgw_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "add_offset": "@t",
+        "add_offset": "On",
         "number_fields": "",
         "string_fields": "",
         "time_fields": ""
