@@ -58,7 +58,7 @@
         "plugin": "/opt/sfapm/td-agent-bit/templates/ngoms_grid_config.conf",
         "collection_type": "logger",
         "field_discovery": "On",
-        "add_offset": "On",
+        "add_offset": "@t",
         "number_fields": "pendingRequestCount,totalWaitForConnectionTime,member,mdCount,bebEventProcessTime,QuoteResponse,numofaccounts,elapsedTime,delayTime,symbolcountrequested,symbolcountreturned,notLocatedOrderId,quote_resp_ms",
         "string_fields": "poolName",
         "time_fields": "Timestamp,startTime,endTime"
