@@ -61,7 +61,11 @@
         "add_offset": "@t",
         "number_fields": "size,code",
         "string_fields": "",
-        "time_fields": ""
+        "time_fields": "",
+        "field_extracters":{
+          "component1": "(?<component1>\\[.*\\])",
+          "component2": "(?<component2>[a-zA-Z0-9]+):\\d+$"
+        }
       },
       {
         "name": "clientmux",
