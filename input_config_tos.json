@@ -51,6 +51,7 @@
         }
       }
     ],
+    "offset":"-0600",
     "custom-plugins": [
       {
         "name": "alertaccess",
