@@ -68,16 +68,6 @@
         }
       },
       {
-        "name": "clientmux",
-        "parser": "/opt/sfapm/td-agent-bit/templates/clientmux_parser.conf",
-        "plugin": "/opt/sfapm/td-agent-bit/templates/clientmux_config.conf",
-        "collection_type": "logger",
-        "field_discovery": "Off",
-        "number_fields": "size,code",
-        "string_fields": "",
-        "time_fields": ""
-      },
-      {
         "name": "restarts",
         "parser": "/opt/sfapm/td-agent-bit/templates/restarts_parser.conf",
         "plugin": "/opt/sfapm/td-agent-bit/templates/restarts_config.conf",
@@ -189,9 +179,9 @@
         "time_fields": ""
       },
       {
-        "name": "tosmgw_common",
-        "parser": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_parser.conf",
-        "plugin": "/opt/sfapm/td-agent-bit/templates/tosmgw_common_config.conf",
+        "name": "tossgw",
+        "parser": "/opt/sfapm/td-agent-bit/templates/tossgw_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/tossgw_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
         "number_fields": "",
@@ -199,12 +189,52 @@
         "time_fields": ""
       },
       {
-        "name": "tossgw",
-        "parser": "/opt/sfapm/td-agent-bit/templates/tossgw_parser.conf",
-        "plugin": "/opt/sfapm/td-agent-bit/templates/tossgw_config.conf",
+        "name": "prod_down",
+        "parser": "/opt/sfapm/td-agent-bit/templates/prod_down_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/prod_down_config.conf",
         "collection_type": "logger",
         "field_discovery": "Off",
-        "number_fields": "",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "prod_up",
+        "parser": "/opt/sfapm/td-agent-bit/templates/prod_up_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/prod_up_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "common",
+        "parser": "/opt/sfapm/td-agent-bit/templates/common_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/common_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "control",
+        "parser": "/opt/sfapm/td-agent-bit/templates/control_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/control_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
+      },
+      {
+        "name": "fix",
+        "parser": "/opt/sfapm/td-agent-bit/templates/fix_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/fix_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "number_fields": "size,code",
         "string_fields": "",
         "time_fields": ""
       }
