@@ -237,6 +237,16 @@
         "number_fields": "size,code",
         "string_fields": "",
         "time_fields": ""
+      },
+      {
+        "name": "subsystem",
+        "parser": "/opt/sfapm/td-agent-bit/templates/subsystem_parser.conf",
+        "plugin": "/opt/sfapm/td-agent-bit/templates/subsystem_config.conf",
+        "collection_type": "logger",
+        "field_discovery": "Off",
+        "number_fields": "size,code",
+        "string_fields": "",
+        "time_fields": ""
       }
     ],
     "enabled": true,
