@@ -5,12 +5,10 @@
         "name": "linux"
       },
       {
-        "name": "topstats",
-        "interval": 10,
+        "name": "psstats",
         "config": {
-          "process": "*",
-          "resource": "CPU",
-          "maximum_grep": 5
+          "num_processes": "*",
+          "sort_by": "CPU"
         }
       },
       {

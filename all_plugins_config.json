@@ -5,6 +5,13 @@
         "name": "linux"
       },
       {
+        "name": "psstats",
+        "config": {
+          "num_processes": "*",
+          "sort_by": "CPU"
+        }
+      },
+      {
         "name": "nginx",
         "config": {
           "port": "80",
