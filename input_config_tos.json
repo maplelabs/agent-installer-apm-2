@@ -232,6 +232,7 @@
         "name": "session",
         "parser": "/opt/sfapm/td-agent-bit/templates/session_parser.conf",
         "plugin": "/opt/sfapm/td-agent-bit/templates/session_config.conf",
+        "multiline": "On",
         "collection_type": "logger",
         "field_discovery": "Off",
         "number_fields": "size,code",
