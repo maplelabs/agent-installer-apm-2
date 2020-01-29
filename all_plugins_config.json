@@ -12,6 +12,13 @@
         }
       },
       {
+        "name": "psstats",
+        "config": {
+          "num_processes": "10",
+          "sort_by": "MEM"
+        }
+      },
+      {
         "name": "nginx",
         "config": {
           "port": "80",
