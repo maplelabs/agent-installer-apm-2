@@ -5,6 +5,9 @@
         "name": "linux"
       },
       {
+        "name" : "socketstats"
+      },
+      {
         "name": "psstats",
         "config": {
           "num_processes": "*",
