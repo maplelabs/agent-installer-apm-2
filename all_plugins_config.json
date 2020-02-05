@@ -8,6 +8,9 @@
         "name" : "socketstats"
       },
       {
+        "name" : "lsofstats"
+      },
+      {
         "name": "psstats",
         "config": {
           "num_processes": "*",
