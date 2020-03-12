@@ -12,7 +12,7 @@ collectd==1.0
 argparse==1.4.0
 apache-log-parser==1.7.0
 MYSQL-python==1.2.3
-psutil==5.3.0
+psutil==5.6.6
 pyjolokia==0.3.1
 psycopg2-binary==2.7.5
 pytz==2019.3
