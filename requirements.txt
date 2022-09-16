@@ -3,7 +3,7 @@ pyserial==3.4
 user-agents==2.0
 ua-parser==0.8.0
 six==1.11.0
-mako==0.9.1
+mako==1.2.2
 MarkupSafe==1.1.1
 chardet==3.0.4
 certifi==2019.9.11
