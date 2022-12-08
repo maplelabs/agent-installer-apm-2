@@ -6,7 +6,7 @@ six==1.11.0
 mako==0.9.1
 MarkupSafe==1.1.1
 chardet==3.0.4
-certifi==2019.9.11
+certifi==2022.12.7
 requests==2.10.0
 collectd==1.0
 argparse==1.4.0
